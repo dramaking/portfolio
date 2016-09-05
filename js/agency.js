@@ -30,4 +30,41 @@
         }
     })
 
+    // Hamburger Menu
+    openMenuBtn();
+
+    function openMenuBtn() {
+        $(document).on("keyup", function(event) {
+            if (event.keyCode == 27) {
+                event.preventDefault();
+                $("#menu-btn").trigger("click");
+            }
+        });
+
+        $("#menu-btn").on("click", function(event) {
+            event.preventDefault();
+        });
+
+        $("#menu-btn").on("click", function(event) {
+        event.preventDefault();
+        $(this).toggleClass("active");
+
+        $("body").bind("mousewheel touchmove", function(event) {
+            if ($("#menu-btn").hasClass("active")) {
+                event.preventDefault();
+            }
+            else {
+                 $(this).unbind(event);
+            }
+        });
+
+        $("#overlay").toggleClass("open");
+        $("#main-wrapper").toggleClass("blur");
+      });
+
+        $("#overlay ul li a").on("click", function() {
+            $("#menu-btn").trigger("click");
+        });
+    }
+
 })(jQuery); // End of use strict
