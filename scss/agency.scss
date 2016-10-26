@@ -73,9 +73,9 @@ h1, h2, h3, h4, h5, h6 {
     @include button-variant(white, $theme-primary, $theme-primary);
     @include heading-font;
     font-weight: 700;
-    border-radius: 3px;
-    font-size: 18px;
-    padding: 20px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 18px 32px;
 }
 
 // Custom Navigation Bar
@@ -193,6 +193,7 @@ header {
     @include background-cover;
     text-align: center;
     color: white;
+    height: 100vh;
     .intro-text {
         padding-top: 100px;
         padding-bottom: 50px;
@@ -204,9 +205,9 @@ header {
             margin-bottom: 25px;
         }
         .intro-heading {
-            @include heading-font;
-            font-weight: 700;
-            font-size: 50px;
+            @include script-font;
+            // font-weight: 700;
+            font-size: 2em;
             line-height: 50px;
             margin-bottom: 25px;
         }
@@ -226,9 +227,9 @@ header {
                 margin-bottom: 25px;
             }
             .intro-heading {
-                @include heading-font;
-                font-weight: 700;
-                font-size: 75px;
+                @include script-font;
+                // font-weight: 700;
+                font-size: 3em;
                 line-height: 75px;
                 margin-bottom: 50px;
             }
@@ -980,16 +981,27 @@ section#contact {
 footer {
     padding: 25px 0;
     text-align: center;
-    span.copyright {
-        line-height: 40px;
-        @include heading-font;
-        text-transform: none;
+    // span.copyright {
+    //     line-height: 40px;
+    //     @include heading-font;
+    //     text-transform: none;
+    // }
+    // ul.quicklinks {
+    //     margin-bottom: 0;
+    //     line-height: 40px;
+    //     @include heading-font;
+    //     text-transform: none;
+    // }
+    img {
+      width: 4em;
     }
-    ul.quicklinks {
-        margin-bottom: 0;
-        line-height: 40px;
-        @include heading-font;
-        text-transform: none;
+
+    .copyright {
+      font-size: 0.8em;
+      .heart {
+        color: red;
+        font-size: 1.3em;
+      }
     }
 }
 
