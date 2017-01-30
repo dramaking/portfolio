@@ -77,7 +77,8 @@
 }
 
 @mixin body-font {
-  font-family: "Merriweather", "Droid Serif", serif;
+  // font-family: "Merriweather", "Droid Serif", serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @mixin heading-font {
